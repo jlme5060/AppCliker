@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.MainPage"
+             BackgroundColor="Yellow">
+    <!-- Cambia el fondo a amarillo -->
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="30"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <!-- Imagen del monstruo -->
+            <Image
+                x:Name="MonsterImage"
+                Source="mounstrou.jpg"
+                HeightRequest="200"
+                WidthRequest="200"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Imagen del monstruo" />
+
+            <!-- Texto con instrucciones -->
+            <Label
+                Text="¡Pulsa 10 veces para vencer al monstruo!"
+                FontSize="20"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center" />
+
+            <!-- Botón para contar clics -->
+            <Button
+                x:Name="CounterBtn"
+                Text="¡Púlsame!"
+                FontSize="18"
+                BackgroundColor="Red"
+                TextColor="White"
+                CornerRadius="10"
+                Padding="10"
+                SemanticProperties.Hint="Cuenta cuántas veces haces clic"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"
+                WidthRequest="300" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
